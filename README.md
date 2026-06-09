@@ -16,16 +16,16 @@
 
 **Backdown** helps you safely and ergonomically remove duplicate files.
 
-Its design is based upon my observation of frequent patterns regarding build-up of duplicates with time, especially images and other media files.
+Its design is based on my observation of frequent patterns in the buildup of duplicates over time, especially images and other media files.
 
-Finding duplicates is easy. Cleaning the disk when there are thousands of them is the hard part. What Backdown brings is the easy way to select and remove the duplicates you don't want to keep.
+Finding duplicates is easy. Cleaning up the disk when there are thousands of them is the hard part. What Backdown provides is an easy way to select and remove the duplicates you don't want to keep.
 
 A Backdown session goes through the following phases:
 
 1. Backdown analyzes the directory of your choice and find sets of duplicates (files whose content is exactly the same). Backdown ignores symlinks and files or directories whose name starts with a dot.
-2. Backdown asks you a few questions depending on the analysis. Nothing is removed at this point: you only stage files for removal. Backdown never lets you stage all items in a set of identical files
-3. After having maybe looked at the list of staged files, you confirm the removals
-4. Backdown does the removals on disk
+2. Backdown asks you a few questions depending on the analysis. Nothing is removed at this point—you only stage files for removal. Backdown never lets you stage all items in a set of identical files.
+3. After optionally reviewing the list of staged files, you confirm the removals.
+4. Backdown does the removals on disk.
 
 # What it looks like
 
@@ -37,7 +37,7 @@ Another kind of question:
 
 ![screen 2](doc/screen-2.png)
 
-Yet another one:
+Another one:
 
 ![screen 3](doc/screen-3.png)
 
@@ -49,7 +49,7 @@ Review and Confirm:
 
 ![screen 5](doc/screen-5.png)
 
-At this point you may also export the report as JSON, and you may decide to replace each removed file with a link to one of the kept ones.
+At this point you may also export the report as JSON, and can replace each removed file with a link to one of the kept ones.
 
 # Installation
 
@@ -95,7 +95,7 @@ backdown -i /some/directory
 
 ## JSON report
 
-After the staging phase, you may decide to export a report as JSON. This doesn't prevent doing also the removals.
+After the staging phase, you may decide to export a report as JSON. This does not prevent you from also performing the removals.
 
 The JSON looks like this:
 
@@ -140,8 +140,8 @@ The JSON looks like this:
 
 # Advice
 
-* If you launch backdown on a big directory, it may find more duplicates you suspect there are. Don't force yourself to answer *all* questions at first: if you stage the removals of the first dozen questions you'll gain already a lot and you may do the other ones another day
-* Don't launch backdown at the root of your disk because you don't want to try and deal with duplicates in system resources, programs, build artefacts, etc. Launch backdown where you store your images, or your videos or musics
-* Backdown isn't designed for dev directories and doesn't respect .gitignore rules
-* If you launch backdown in a directory with millions files on a slow disk, you'll have to wait a long time while the content is hashed. Try with a smaller directory first if you have an HDD
-* If you're only interested in images, use the -i option
+* If you launch backdown on a big directory, it may find more duplicates than you suspect. Don't force yourself to answer *all* questions at first—if you stage the removals from the first dozen questions, you'll already gain a lot and may do the others another day.
+* Don't launch backdown at the root of your disk because you don't want to deal with duplicates in system resources, programs, build artifacts, etc. Launch backdown where you store your images, videos, or music.
+* Backdown isn't designed for dev directories and doesn't respect `.gitignore` rules.
+* If you launch backdown in a directory with millions files on a slow disk, you'll have to wait a long time while the content is hashed. Try with a smaller directory first if you have an HDD.
+* If you're only interested in images, use the -i option.
