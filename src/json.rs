@@ -32,7 +32,7 @@ fn available_path(name: &str) -> PathBuf {
 }
 
 /// write a JSON value in a file whose name will be based on the provided
-/// name, with a date and if necessary with an additional number to avoid
+/// name, with a date and, if necessary, with an additional number to avoid
 /// collision.
 pub fn write_in_file(
     name: &str,

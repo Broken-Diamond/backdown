@@ -22,7 +22,7 @@ Finding duplicates is easy. Cleaning up the disk when there are thousands of the
 
 A Backdown session goes through the following phases:
 
-1. Backdown analyzes the directory of your choice and find sets of duplicates (files whose content is exactly the same). Backdown ignores symlinks and files or directories whose name starts with a dot.
+1. Backdown analyzes the directory of your choice and finds sets of duplicates (files whose content is exactly the same). Backdown ignores symlinks and files or directories whose name starts with a dot.
 2. Backdown asks you a few questions depending on the analysis. Nothing is removed at this point—you only stage files for removal. Backdown never lets you stage all items in a set of identical files.
 3. After optionally reviewing the list of staged files, you confirm the removals.
 4. Backdown does the removals on disk.
@@ -67,7 +67,7 @@ cargo install --locked backdown
 
 You must have the Rust env installed: https://rustup.rs
 
-Download this repository then run
+Download this repository, then run:
 
 ```bash
 cargo install --path .
@@ -143,5 +143,5 @@ The JSON looks like this:
 * If you launch backdown on a big directory, it may find more duplicates than you suspect. Don't force yourself to answer *all* questions at first—if you stage the removals from the first dozen questions, you'll already gain a lot and may do the others another day.
 * Don't launch backdown at the root of your disk because you don't want to deal with duplicates in system resources, programs, build artifacts, etc. Launch backdown where you store your images, videos, or music.
 * Backdown isn't designed for dev directories and doesn't respect `.gitignore` rules.
-* If you launch backdown in a directory with millions files on a slow disk, you'll have to wait a long time while the content is hashed. Try with a smaller directory first if you have an HDD.
+* If you launch backdown in a directory with millions of files on a slow disk, you'll have to wait a long time while the content is hashed. Try with a smaller directory first if you have an HDD.
 * If you're only interested in images, use the -i option.

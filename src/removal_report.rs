@@ -131,11 +131,11 @@ impl<'d> RemovalReport<'d> {
         }
     }
 
-    /// "Normally" the algorithms of backdown never remove all files
+    /// "Normally", the algorithms of backdown never remove all files
     /// in a set of identical files. But if I change those algorithms
     /// and make them more complex, I may make an error. So this
-    /// function will check there's at least one kept file in each
-    /// touched set, and will raise an error if a set is totally
+    /// function will check that there's at least one kept file in
+    /// each touched set, and will raise an error if a set is totally
     /// emptied.
     /// This *must* be called just before starting the real removals.
     pub fn check_no_emptied_set(

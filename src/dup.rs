@@ -71,7 +71,7 @@ impl DupFileRef {
                 |n| n.to_string_lossy().to_string()
             )
     }
-    /// get the file name when the file has a name like "thing (3).jpg"
+    /// get the filename when the file has a name like "thing (3).jpg"
     /// or "thing (3rd copy).png"
     pub fn copy_name(self, dups:&[DupSet]) -> Option<&str> {
         copy_name(self.path(dups))
@@ -83,7 +83,7 @@ impl DupFileRef {
     }
 }
 
-/// get the name if this path is of a "copy" file, that is an usual name for a copy
+/// get the name if this path is of a "copy" file, that is a usual name for a copy
 pub fn copy_name(path: &Path) -> Option<&str> {
     path
         .file_name()
