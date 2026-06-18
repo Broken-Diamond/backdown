@@ -27,7 +27,7 @@ pub struct DirPair<'d> {
     pub file_pairs: Vec<FilePair>,
 }
 
-/// a brotherhood gather duplicates having the same parent
+/// a brotherhood gathers duplicates having the same parent
 #[derive(Debug)]
 pub struct Brotherhood<'d> {
 
@@ -40,7 +40,7 @@ pub struct Brotherhood<'d> {
 
     /// when all files have names like "thing (copy).png", "thing (another copy).png", etc.
     /// except one file, we can propose an automated resolution.
-    /// Note that we don't check the start of filenames are identical because we
+    /// Note that we don't check that the start of filenames are identical because we
     /// don't, in fact, care.
     pub is_auto_solvable: bool,
 }
